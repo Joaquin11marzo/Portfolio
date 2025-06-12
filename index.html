@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Joaquín Iñaki Piñeiro - Portfolio</title>
+  <title>Joaquín Iñaki Piñeiro-Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="icon" type="favicon1/png" href="favicon1.png">
   <style>
     html {
       scroll-behavior: smooth;
@@ -16,11 +17,11 @@
   <header>
     <nav class="navbar">
       <ul class="nav-links">
-        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#sobre-mi">Sobre mi</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
-      <button id="modo-toggle" class="modo-boton">🌙 Modo Oscuro</button>
+      <button id="modo-toggle" class="modo-boton">Modo Oscuro</button>
     </nav>
   </header>
 
@@ -33,7 +34,7 @@
     <section id="sobre-mi" class="pagina">
       <h1>Joaquín Iñaki Piñeiro</h1>
       <img src="Chrollo.jpg" alt="Joaquín Iñaki Piñeiro" class="perfil" />
-      <p>Soy un estudiante del Instituto Industrial Luis A. Huergo,  especializado en programación, nacido el 11 de marzo de 2009.</p>
+      <p>Soy un estudiante del Instituto Industrial Luis A. Huergo,  especializado en programación. Se usar los lengüajes de programación básicos.</p>
     </section>
 
     <section id="proyectos" class="pagina">
@@ -48,7 +49,15 @@
       </div>
 
       <div class="proyecto">
-        <h3>Proyecto 2: Portfolio</h3>
+        <h3>Proyecto 2: Palabras Huergo</h3>
+        <p>Un juego que recrea el conocido juego de "PasaPalabras", con diferentes juego como adivina la bandera, adivina el peronaje, adivina el famoso, etc.</p>
+        <a href="https://github.com/Joaquin11marzo/PasaPalabras" target="_blank">
+          <img src="pasapalabra.png" alt="Palabras Huergo" />
+        </a>
+      </div>
+
+      <div class="proyecto">
+        <h3>Proyecto 3: Portfolio</h3>
         <p>Un portfolio donde podés ver información acerca de mí.</p>
         <a href="https://github.com/Joaquin11marzo/portfolio" target="_blank">
           <img src="portfolio.png" alt="Portfolio Personal" />
@@ -58,7 +67,7 @@
 
     <section id="contacto" class="pagina">
       <h2>Contacto</h2>
-      <p>Podés contactarme por:</p>
+      <p>Podes contactarme desde:</p>
       <p>
         <strong>Email:</strong> jpineiro@alumno.huergo.edu.ar<br>
         <strong>GitHub:</strong> <a href="https://github.com/Joaquin11marzo" target="_blank">github.com/Joaquin11marzo</a>
@@ -74,7 +83,7 @@
     const toggleBtn = document.getElementById("modo-toggle");
     toggleBtn.addEventListener("click", function () {
       document.body.classList.toggle("oscuro");
-      toggleBtn.textContent = document.body.classList.contains("oscuro") ? "☀️ Modo Claro" : "🌙 Modo Oscuro";
+      toggleBtn.textContent = document.body.classList.contains("oscuro") ? "Modo Claro" : "Modo Oscuro";
     });
   </script>
 </body>
