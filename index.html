@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Joaquín Iñaki Piñeiro-Portfolio</title>
+  <title>Joaquín Iñaki Piñeiro - Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="icon" type="favicon1/png" href="favicon1.png">
@@ -14,10 +14,16 @@
   </style>
 </head>
 <body>
+  <!-- Pantalla de bienvenida -->
+  <div id="preloader">
+    <div class="mensaje-bienvenida">¡Bienvenido a mi portfolio!</div>
+  </div>
+
   <header>
     <nav class="navbar">
       <ul class="nav-links">
-        <li><a href="#sobre-mi">Sobre mi</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
@@ -27,14 +33,27 @@
 
   <main>
     <section id="bienvenida" class="pagina bienvenida">
-      <h1>Bienvenido a mi portfolio</h1>
-      <p>Gracias por visitar. Acá vas a encontrar quién soy, mis proyectos y cómo contactarme.</p>
+      <h1>Explorá mi trabajo</h1>
+      <p>Acá vas a encontrar quién soy, los proyectos que desarrollé y cómo podés contactarme.</p>
     </section>
 
-    <section id="sobre-mi" class="pagina">
-      <h1>Joaquín Iñaki Piñeiro</h1>
-      <img src="Chrollo.jpg" alt="Joaquín Iñaki Piñeiro" class="perfil" />
-      <p>Soy un estudiante del Instituto Industrial Luis A. Huergo,  especializado en programación. Se usar los lengüajes de programación básicos.</p>
+    <section id="sobre-mi" class="pagina sobre-mi">
+      <div class="contenido-sobre-mi" style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap;">
+        <img src="Chrollo.jpg" alt="Joaquín Iñaki Piñeiro" class="perfil" style="flex-shrink: 0; max-width: 200px;" />
+        <div class="texto" style="flex: 1;">
+          <h1>Joaquín Iñaki Piñeiro</h1>
+          <p>Soy un estudiante del Instituto Industrial Luis A. Huergo, especializado en programación. Sé usar los lenguajes de programación básicos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="habilidades" class="pagina">
+      <h2>Habilidades</h2>
+      <ul class="habilidades">
+        <li>💻 HTML, CSS</li>
+        <li>🛠 Git y GitHub</li>
+        <li>👨‍💻 Python</li>
+      </ul>
     </section>
 
     <section id="proyectos" class="pagina">
@@ -50,7 +69,7 @@
 
       <div class="proyecto">
         <h3>Proyecto 2: Palabras Huergo</h3>
-        <p>Un juego que recrea el conocido juego de "PasaPalabras", con diferentes juego como adivina la bandera, adivina el peronaje, adivina el famoso, etc.</p>
+        <p>Un juego que recrea el conocido juego de "PasaPalabras", con diferentes juegos como adiviná la bandera, adiviná el personaje, adiviná el famoso, etc.</p>
         <a href="https://github.com/Joaquin11marzo/PasaPalabras" target="_blank">
           <img src="pasapalabra.png" alt="Palabras Huergo" />
         </a>
@@ -67,10 +86,10 @@
 
     <section id="contacto" class="pagina">
       <h2>Contacto</h2>
-      <p>Podes contactarme desde:</p>
+      <p>Puedes contactarme desde:</p>
       <p>
-        <strong>Email:</strong> jpineiro@alumno.huergo.edu.ar<br>
-        <strong>GitHub:</strong> <a href="https://github.com/Joaquin11marzo" target="_blank">github.com/Joaquin11marzo</a>
+        📧 <strong>Email:</strong> jpineiro@alumno.huergo.edu.ar<br>
+        💻 <strong>GitHub:</strong> <a href="https://github.com/Joaquin11marzo" target="_blank">github.com/Joaquin11marzo</a>
       </p>
     </section>
   </main>
@@ -84,6 +103,13 @@
     toggleBtn.addEventListener("click", function () {
       document.body.classList.toggle("oscuro");
       toggleBtn.textContent = document.body.classList.contains("oscuro") ? "Modo Claro" : "Modo Oscuro";
+    });
+
+    window.addEventListener("load", () => {
+      const preloader = document.getElementById("preloader");
+      setTimeout(() => {
+        preloader.style.display = "none";
+      }, 3000);
     });
   </script>
 </body>
