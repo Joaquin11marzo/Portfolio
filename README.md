@@ -1,0 +1,1 @@
+En este proyecto de github vas a encontrar un portfolio, donde muestro información mía, con algunos proyectos realizados por mi/con amigos y los lugares donde pueden contactarme por cualquier duda que tengan. 
